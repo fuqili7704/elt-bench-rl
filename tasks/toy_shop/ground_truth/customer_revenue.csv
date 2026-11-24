@@ -1,0 +1,7 @@
+customer_id,customer_name,city,order_count,total_revenue
+3,Carol,Urbana,2,10.75
+2,Bob,Chicago,1,12.5
+5,Eve,Springfield,1,18.0
+6,Frank,Chicago,0,0.0
+1,Alice,Chicago,3,41.49
+4,Dan,Urbana,1,49.98

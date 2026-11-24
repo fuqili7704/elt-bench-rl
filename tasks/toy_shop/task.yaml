@@ -1,0 +1,23 @@
+# What the agent sees as the task specification.
+task_id: toy_shop
+description: |
+  A small online shop exports its customers and products as CSV files, and its
+  orders as a JSON-lines dump from a document store.
+  1. Extract & load all three source tables into the warehouse schema `raw`
+     (table names: customers, products, orders).
+  2. Implement the data models described in data_model.yaml as dbt models.
+  3. Run the pipeline and submit when you are done.
+
+sources:
+  - name: crm            # stand-in for a PostgreSQL source
+    type: csv
+    tables:
+      customers: source/customers.csv
+      products: source/products.csv
+  - name: orders_store   # stand-in for a MongoDB source
+    type: jsonl
+    tables:
+      orders: source/orders.jsonl
+
+destination:
+  raw_schema: raw        # loaded tables must land here (graded in stage 1)

@@ -1,0 +1,13 @@
+raw_row_counts:
+  CBSA: 465
+  alias: 41701
+  area_code: 53796
+  avoid: 24114
+  congress: 540
+  country: 51001
+  state: 62
+  zip_congress: 45231
+  zip_data: 41563
+sort_keys:
+  states:
+  - abbreviation

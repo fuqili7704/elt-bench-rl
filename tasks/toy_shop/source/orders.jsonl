@@ -1,0 +1,10 @@
+{"order_id": 1, "customer_id": 1, "product_id": 101, "quantity": 4, "order_date": "2024-01-03", "status": "completed"}
+{"order_id": 2, "customer_id": 1, "product_id": 103, "quantity": 1, "order_date": "2024-01-05", "status": "completed"}
+{"order_id": 3, "customer_id": 2, "product_id": 102, "quantity": 10, "order_date": "2024-01-07", "status": "completed"}
+{"order_id": 4, "customer_id": 2, "product_id": 104, "quantity": 1, "order_date": "2024-01-09", "status": "cancelled"}
+{"order_id": 5, "customer_id": 3, "product_id": 101, "quantity": 2, "order_date": "2024-01-10", "status": "completed"}
+{"order_id": 6, "customer_id": 3, "product_id": 102, "quantity": 3, "order_date": "2024-01-12", "status": "completed"}
+{"order_id": 7, "customer_id": 4, "product_id": 103, "quantity": 2, "order_date": "2024-01-15", "status": "completed"}
+{"order_id": 8, "customer_id": 5, "product_id": 104, "quantity": 1, "order_date": "2024-01-20", "status": "completed"}
+{"order_id": 9, "customer_id": 5, "product_id": 101, "quantity": 1, "order_date": "2024-01-21", "status": "cancelled"}
+{"order_id": 10, "customer_id": 1, "product_id": 102, "quantity": 2, "order_date": "2024-01-25", "status": "completed"}

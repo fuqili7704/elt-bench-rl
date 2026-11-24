@@ -1,0 +1,5 @@
+destination_schema: raw
+streams:
+  - {source: crm, table: customers, destination_table: customers}
+  - {source: crm, table: products, destination_table: products}
+  - {source: orders_store, table: orders, destination_table: orders}

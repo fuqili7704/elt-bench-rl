@@ -1,0 +1,23 @@
+# The target tables ("data models") the agent must produce. Graded in stage 2.
+models:
+  - name: customer_revenue
+    description: One row per customer, INCLUDING customers who never ordered.
+    columns:
+      - name: customer_id
+      - name: customer_name
+      - name: city
+      - name: order_count
+        description: Number of orders with status = 'completed'.
+      - name: total_revenue
+        description: >
+          Sum of quantity * product price over completed orders,
+          rounded to 2 decimals. 0 if the customer has no completed orders.
+
+  - name: city_sales
+    description: One row per city that has at least one customer.
+    columns:
+      - name: city
+      - name: num_customers
+        description: Number of customers living in the city.
+      - name: total_revenue
+        description: Sum of total_revenue of those customers, rounded to 2 decimals.

@@ -1,0 +1,36 @@
+task_id: address
+description: |
+  This is ELT-Bench task `address`. Its data lives in 5 source systems
+  (postgres, mongodb, s3, api, file); see task.yaml for which tables each one holds. Column descriptions
+  for every source table are in docs/.
+  1. Extract & load every source table into the warehouse schema `raw`,
+     keeping the source table name as the destination table name.
+  2. Implement the data models described in data_model.yaml as dbt models.
+  3. Run the pipeline and submit when you are done.
+sources:
+- name: postgres
+  type: postgres
+  tables:
+    area_code: source/postgres/area_code.csv
+    country: source/postgres/country.csv
+    zip_congress: source/postgres/zip_congress.csv
+    zip_data: source/postgres/zip_data.csv
+- name: mongodb
+  type: mongodb
+  tables:
+    congress: source/mongodb/congress.csv
+- name: s3
+  type: s3
+  tables:
+    CBSA: source/s3/CBSA.jsonl
+- name: api
+  type: api
+  tables:
+    alias: source/api/alias.csv
+    avoid: source/api/avoid.csv
+- name: file
+  type: file
+  tables:
+    state: source/file/state.csv
+destination:
+  raw_schema: raw
